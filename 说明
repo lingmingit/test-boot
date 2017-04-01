@@ -1,0 +1,19 @@
+
+
+
+需要jdk1.8
+
+Spring Boot——2分钟构建spring web mvc REST风格HelloWorld
+	http://jinnianshilongnian.iteye.com/blog/1997192
+	
+	
+	运行  
+      第一种方式
+	通过在UserController中加上@EnableAutoConfiguration开启自动配置，然后通过SpringApplication.run(UserController.class);运行这个控制器；这种方式只运行一个控制器比较方便；
+      第二种方式
+	通过@Configuration+@ComponentScan开启注解扫描并自动注册相应的注解Bean
+	经过测试：发现通过该类进行运行，该类必须在其它两个类的上层包(com.test)，否则resful 不能运行
+	
+	
+	到此，一个基本的REST风格的web应用就构建完成了。
+          地址栏输入http://localhost:8080/user/1即可看到json结果。
